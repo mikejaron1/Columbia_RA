@@ -5,11 +5,11 @@ This program uses the Facebook Graph API to gather data on a Facebook group. Cur
 
 
 HOW IT RUNS:
-The cronjob runs a the code every Sunday at 4am. It first finds any new posts and comments made since the last search and then updates the users table with any new members and their first comment. If the auth expires, which it will every 2 months, an email, to the address in the config.py file, should be sent letting you know that has happened. Once it has follow the instructions below to get a new long term auth token. If anything goes wrong an email should be sent to let you know.
+The cronjob runs the code every Sunday at 4am. It first finds any new posts and comments made since the last search and then updates the users table with any new members and their first comment. If the auth expires, which it will every 2 months, an email, to the address in the config.py file, should be sent letting you know that has happened. Once it has follow the instructions below to get a new long term auth token. If anything goes wrong an email should be sent to let you know.
 
 
 HOW TO MANUALLY OPERATE:
-1*. Run the 'fb_create_feed_table.py' code to create the table to populate. Only do this the very first time! If you do it after data has been put in, it will all be erased.
+1*. Run the 'fb_create_feed_table.py' code to create the table to populate. **Only do this the very first time!** If you do it after data has been put in, it will all be erased.
 2. Then run 'main_fb_api_scrape.py', if after first time then just skip to this step.
 3. Run members_firsts.py to update user table with all members and their first comment.
 
